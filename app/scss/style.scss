@@ -1,16 +1,47 @@
-@import "vars";
-@import "libs";
-@import "fonts";
-.header {}
-
-.header__slider {
-    &-item {
-        height: 100vh;
-        background-image: url(../images/header-bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+    @import "vars";
+    @import "libs";
+    @import "fonts";
+    @import "global";
+    .header__slider {
+        &-item {
+            height: 100vh;
+            background-image: url("../images/header-bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
     }
-}
-
-@import "media";
+    
+    .slider-item__info {
+        position: absolute;
+        right: 80px;
+        bottom: 116px;
+        text-align: right;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    
+    .slider-item__info--suptitle {
+        margin-bottom: 5px;
+    }
+    
+    .slider-item__info--suptext {
+        margin-bottom: 8px;
+    }
+    
+    .slider-item__info--title {
+        font-size: 80px;
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    
+    .slider-item__info--text {
+        font-size: 40px;
+        line-height: 46px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+    
+    @import "media";

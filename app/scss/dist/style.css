@@ -443,10 +443,73 @@ template {
   display: none;
 }
 
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.suptitle-left {
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.5;
+  padding-left: 103px;
+  position: relative;
+  display: inline-block;
+}
+.suptitle-left::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  left: 0;
+  top: 50%;
+}
+
 .header__slider-item {
   height: 100vh;
-  background-image: url(../images/header-bg.jpg);
+  background-image: url("../images/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+.slider-item__info {
+  position: absolute;
+  right: 80px;
+  bottom: 116px;
+  text-align: right;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.slider-item__info--suptitle {
+  margin-bottom: 5px;
+}
+
+.slider-item__info--suptext {
+  margin-bottom: 8px;
+}
+
+.slider-item__info--title {
+  font-size: 80px;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.slider-item__info--text {
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 800;
+  margin-bottom: 20px;
 }

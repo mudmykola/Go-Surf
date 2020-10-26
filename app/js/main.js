@@ -1,9 +1,6 @@
 $(function() {
-
     $('.header__slider').slick({
-        infinite: true
-    })
-
-
-
+        infinite: true,
+        fade: true,
+    });
 });
