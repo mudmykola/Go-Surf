@@ -17,8 +17,20 @@
         .header__arrows {
             position: absolute;
             left: 210px;
-            bottom: 40px;
+            bottom: 30px;
             z-index: 3;
+        }
+        
+        .line-animation {
+            stroke-dashoffset: 600;
+            stroke-dasharray: 600;
+            animation: animdash 3s infinite 6s;
+        }
+        
+        @keyframes animdash {
+            to {
+                stroke-dashoffset: 0;
+            }
         }
         
         .header__aside {
@@ -44,6 +56,7 @@
                     font-weight: 500;
                     padding-top: 6px;
                     margin-bottom: 20px;
+                    text-transform: capitalize;
                 }
             }
         }
@@ -71,6 +84,7 @@
             position: relative;
             font-weight: 300;
             padding-left: 19px;
+            text-transform: capitalize;
             &::before {
                 content: "";
                 position: absolute;
@@ -94,7 +108,6 @@
             z-index: 4;
             font-size: 200px;
             line-height: 156px;
-            text-transform: uppercase;
             font-weight: 800;
             opacity: 0.07;
             color: #ffffff;
@@ -118,7 +131,6 @@
             bottom: 116px;
             text-align: right;
             color: #ffffff;
-            text-transform: uppercase;
         }
         
         .slider-item__info--suptitle {
@@ -132,7 +144,6 @@
         .slider-item__info--title {
             font-size: 80px;
             text-align: right;
-            text-transform: uppercase;
             font-weight: 800;
         }
         
@@ -185,7 +196,67 @@
             &__name {
                 line-height: 19px;
                 font-weight: 300;
+                text-transform: capitalize;
             }
         }
         
+        // Surf
+        .surf {
+            padding: 160px 0 210px;
+            background-image: url('../images/surf-img-marker.png');
+            background-position: right 200px;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        
+        .title {
+            span {
+                font-weight: 800;
+                font-size: 200px;
+                color: rgba(#ffffff, .02);
+                position: relative;
+                transform: translateX(-50px);
+                display: inline-block;
+            }
+            h3 {
+                position: absolute;
+                top: 0;
+                right: -5px;
+                font-size: 80px;
+                color: #ffffff;
+                margin: 0;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    right: 0;
+                    width: 80px;
+                    height: 1px;
+                    background-color: $green;
+                }
+            }
+        }
+        
+        .surf__subtitle {
+            text-align: right;
+            padding-right: 80px;
+            margin-top: -86px;
+        }
+        
+        .surf-slider {
+            padding-top: 110px;
+            .slider-arrows {
+                opacity: 0.25;
+                top: 50px;
+            }
+        }
+        
+        .surf-box {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 750px;
+        }
+        
+        // END
         @import "media";
